@@ -6,6 +6,7 @@ public class Main {
 		s.load("./example1.txt");
 		if(!s.isValid()) {
 			System.out.println("supplied sudoku is invalid");
+			System.exit(1);
 		}
 		Puzzle p = s.solve();
 		if(p != null && p.isSolved()) {
@@ -13,6 +14,7 @@ public class Main {
 			s.save("./output.txt");
 		} else {
 			System.out.println("sudoku is unsolvable!");
+			System.exit(1);
 		}
 	}
 }

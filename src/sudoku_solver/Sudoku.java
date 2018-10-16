@@ -62,6 +62,8 @@ public class Sudoku implements Puzzle {
 				char ch = this.lines.get(i).charAt(j);
 				if(Character.isDigit(ch)) {
 					numCount++;
+				} else if(ch != '.') {
+					return false;
 				}
 			}
 		}
